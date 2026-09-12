@@ -48,8 +48,8 @@
 
 | ID | Investigação | Status | Evidência |
 |---|---|---|---|
-| INV-001 | CSV dos testes em excel | 🔴 Bug confirmado | [ver](/prints-gerais/csv-dos-teste-em-excel.png) |
-| INV-002 | Html via DBeaver | 🔴 Bug confirmado | [ver](/prints-gerais/exoport-html-via-dbeaver.png) |
+| INV-001 | CSV dos testes em excel | 🔴 Bug confirmado | [ver](./prints-gerais/csv-dos-teste-em-excel.png) |
+| INV-002 | Html via DBeaver | 🔴 Bug confirmado | [ver](./prints-gerais/exoport-html-via-dbeaver.png) |
 
 ---
 
