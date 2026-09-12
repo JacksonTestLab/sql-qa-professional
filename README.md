@@ -24,8 +24,7 @@
 
 ## 📊 Relatórios ao Vivo
 
-> 🔗 [Relatório de Categorias](https://[usuario].github.io/qa-sql-northwind/evidencias/relatorio-categorias.html)
-> 🔗 [Relatório de Fornecedores](https://[usuario].github.io/qa-sql-northwind/evidencias/relatorio-fornecedores.html)
+> 🔗 [Relatório de Categorias](https://jacksontestlab.github.io/sql-qa-professional/queries/secao-11-IA-acelerador/aula52-relatorio-fornecedores.html)
 
 ---
 
