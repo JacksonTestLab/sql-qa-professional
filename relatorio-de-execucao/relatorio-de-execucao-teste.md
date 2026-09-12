@@ -23,7 +23,7 @@
 
 **Evidência da execução completa** 
 
-![Relatório visual da execução](./conversao-de-html-via-IA.png)
+![Relatório visual da execução](/prints-gerais/conversao-de-html-via-IA.png)
 > *Figura 1 - Output completo da suite executada no DBeaver*
 
 ## ✅ Testes que Passaram (4/8)
@@ -113,7 +113,7 @@ WHERE name = '';
 
 **Evidência:** resultado do assert da execução no DBeaver / relatório HTML.
 
-![Figura 2 - Assert FAILD regra_nome_categoria_obrigatorio](./export-html-via-dbeaver-sql01.png)
+![Figura 2 - Assert FAILD regra_nome_categoria_obrigatorio](/prints-gerais/export-html-via-dbeaver-sql01.png)
 > *Figura 2 - Assert retornando FAILD com IDs dos regitros afetados*
 
 ------------------------------------------------------------------------
