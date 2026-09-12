@@ -24,7 +24,7 @@
 
 ## 📊 Relatórios ao Vivo
 
-> 🔗 [Relatório de Categorias](https://JacksonTestLab.github.io/sql-qa-professional/blob/main/queries/secao-11-IA-acelerador/aula52-relatorio-fornecedores.html)
+> 🔗 [Relatório de Categorias](https://jacksontestlab.github.io/sql-qa-professional/queries/secao-11-IA-acelerador/aula52-relatorio-fornecedores.html)
 
 ---
 
