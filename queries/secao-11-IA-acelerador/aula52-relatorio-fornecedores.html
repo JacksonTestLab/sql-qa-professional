@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório de Validação - Fornecedores</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      color: #2c3e50;
+      line-height: 1.6;
+      padding: 30px 20px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    header {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: #ffffff;
+      padding: 28px 36px;
+    }
+    header h1 {
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 0.92rem;
+      opacity: 0.92;
+    }
+    .meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      padding: 28px 36px 10px;
+    }
+    .card {
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+    }
+    .card .number {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    .card .label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 6px;
+      color: #64748b;
+    }
+    .card.passed .number { color: #27ae60; }
+    .card.failed .number { color: #e74c3c; }
+    .card.na .number { color: #7f8c8d; }
+    .table-wrapper {
+      padding: 20px 36px 30px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    thead {
+      background-color: #34495e;
+      color: #ffffff;
+    }
+    th {
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.88rem;
+      letter-spacing: 0.3px;
+    }
+    td {
+      padding: 13px 16px;
+      border-bottom: 1px solid #edf2f7;
+      font-size: 0.9rem;
+    }
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+    tbody tr:hover {
+      background-color: #f1f5f9;
+    }
+    .status {
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 4px;
+      display: inline-block;
+      font-size: 0.85rem;
+    }
+    .status.passed {
+      color: #27ae60;
+      background: #e8f8ef;
+    }
+    .status.failed {
+      color: #e74c3c;
+      background: #fdecea;
+    }
+    .status.na {
+      color: #7f8c8d;
+      background: #f1f2f3;
+    }
+    .ids {
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.85rem;
+      color: #475569;
+      max-width: 280px;
+      word-break: break-all;
+    }
+    .observations {
+      margin: 0 36px 36px;
+      background: #f8fafc;
+      border-left: 4px solid #3498db;
+      border-radius: 0 8px 8px 0;
+      padding: 22px 26px;
+    }
+    .observations h2 {
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+      color: #2c3e50;
+    }
+    .observations ul {
+      padding-left: 20px;
+    }
+    .observations li {
+      margin-bottom: 8px;
+      color: #334155;
+    }
+    footer {
+      text-align: center;
+      padding: 16px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      border-top: 1px solid #e2e8f0;
+    }
+    @media (max-width: 700px) {
+      .summary {
+        grid-template-columns: 1fr;
+      }
+      .meta {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Relatório de Validação - Fornecedores</h1>
+      <div class="meta">
+        <span>📅 Data de execução: 12/09/2026</span>
+        <span>🗄️ Banco: PostgreSQL (tabela suppliers)</span>
+        <span>👤 Responsável: QA Automation</span>
+      </div>
+    </header>
+
+    <section class="summary">
+      <div class="card passed">
+        <div class="number">12</div>
+        <div class="label">PASSED</div>
+      </div>
+      <div class="card failed">
+        <div class="number">0</div>
+        <div class="label">FAILED</div>
+      </div>
+      <div class="card na">
+        <div class="number">1</div>
+        <div class="label">N/A</div>
+      </div>
+    </section>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Teste</th>
+            <th>Status</th>
+            <th>Falhas</th>
+            <th>IDs com Erro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>33 - Razão Social do Fornecedor Obrigatória</td>
+            <td><span class="status passed">PASSED</span></td>
+            <td>0</td>
+            <td class="ids">—</td>
+          </tr>
+          <tr>
+            <td>34 - Razão Social do Fornecedor Muito Curta</td>
+            <td><span class="status passed">PASSED</span></td>
+            <td>0</td>
+            <td class="ids">—</td>
+          </tr>
+          <tr>
+            <td>35 - Razão Social do Fornecedor Muito Longa</td>
+            <td><span class="status passed">PASSED</span></td>
+            <td>0</td>
+            <td class="ids">—</td>
+          </tr>
+          <tr>
+            <td>36 - Nome do Contato do Fornecedor Obrigatório</td>
+            <td><span class="status passed">PASSED</span></td>
+            <td>0</td>
+            <td class="ids">—</td>
+          </tr>
+          <tr>
+            <td>37 - Nome do Contato do Fornecedor Muito Curto</td>
+            <td><span class="status passed">PASSED</span></td>
+            <td>0</td>
+            <td class="ids">—</td>
+          </tr>
+          <tr>
+            <td>38 - Nome do Contato do Fornecedor Muito Longo</td>
+            <td><span class="status passed">PASSED</span></td>
+            <td>0</td>
+            <td class="ids">—</td>
+          </tr>
+          <tr>
+            <td>39 - E-mail do Fornecedor Obrigatório</td>
+            <td><span class="status passed">PASSED</span></td>
+            <td>0</td>
+            <td class="ids">—</td>
+          </tr>
+          <tr>
+            <td>40 - E-mail do Fornecedor Inválido</td>
+            <td><span class="status passed">PASSED</span></td>
+            <td>0</td>
+            <td class="ids">—</td>
+          </tr>
+          <tr>
+            <td>41 - Telefone do Fornecedor Obrigatório</td>
+            <td><span class="status passed">PASSED</span></td>
+            <td>0</td>
+            <td class="ids">—</td>
+          </tr>
+          <tr>
+            <td>42 - CNPJ do Fornecedor Obrigatório</td>
+            <td><span class="status passed">PASSED</span></td>
+            <td>0</td>
+            <td class="ids">—</td>
+          </tr>
+          <tr>
+            <td>43 - CNPJ do Fornecedor Inválido</td>
+            <td><span class="status passed">PASSED</span></td>
+            <td>0</td>
+            <td class="ids">—</td>
+          </tr>
+          <tr>
+            <td>44 - UF do Fornecedor Obrigatória</td>
+            <td><span class="status passed">PASSED</span></td>
+            <td>0</td>
+            <td class="ids">—</td>
+          </tr>
+          <tr>
+            <td>45 - Cadastro de Fornecedor com Sucesso</td>
+            <td><span class="status na">N/A</span></td>
+            <td>0</td>
+            <td class="ids">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section class="observations">
+      <h2>Observações QA</h2>
+      <ul>
+        <li>Todos os 12 critérios de validação de dados (obrigatoriedade, tamanho mínimo/máximo, formato de e-mail e CNPJ) retornaram <strong>PASSED</strong> com zero registros em violação.</li>
+        <li>Não foram encontrados registros com razão social, nome de contato, e-mail, telefone, CNPJ ou UF nulos/vazios ou fora dos limites definidos nos critérios de aceite.</li>
+        <li>O critério 45 (Cadastro de Fornecedor com Sucesso) foi corretamente marcado como <strong>N/A</strong>, pois trata-se de validação de fluxo de interface e não de estado atual dos dados.</li>
+        <li>A base de fornecedores encontra-se íntegra em relação às regras de negócio avaliadas. Nenhuma ação corretiva de dados é necessária neste momento.</li>
+        <li>Recomenda-se manter esta suíte de asserts SQL no pipeline de regressão para monitoramento contínuo da qualidade dos dados.</li>
+      </ul>
+    </section>
+
+    <footer>
+      Relatório gerado automaticamente • Suite SQL de Fornecedores • 12/09/2026
+    </footer>
+  </div>
+</body>
+</html>
